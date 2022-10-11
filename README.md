@@ -5,7 +5,7 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 ### Until Oct 14th 2022
 
-** What we’ve done this week (up to Oct 14th):**
+**What we’ve done this week (up to Oct 14th):**
 
 - Downloaded pgAdmin, connected to MSiA’s Postgres server, and explored pgAdmin.
 
