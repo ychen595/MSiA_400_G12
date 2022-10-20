@@ -26,3 +26,4 @@ Sample the dataset to find the most appropriate subsets.
 
 - Define ML questions. 
 
+### Oct 15th - Oct 21st 
