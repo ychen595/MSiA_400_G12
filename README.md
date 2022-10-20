@@ -36,3 +36,4 @@ Sample the dataset to find the most appropriate subsets.
 - Worked on store location visualization. Plot the number of stores by each store to see where Dillards' store is located.
 
 **What we're going to do the next week**
+- prepare features
