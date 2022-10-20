@@ -27,3 +27,12 @@ Sample the dataset to find the most appropriate subsets.
 - Define ML questions. 
 
 ### Oct 15th - Oct 21st 
+
+
+**What we’ve done this week (up to Oct 20th):**
+
+- Started the EDA on transection database random sampling from the original data. Checked the data distribution. Graphed correlation. Check and taken out outliers to reduce skewness. 
+
+- Worked on store location visualization. Plot the number of stores by each store to see where Dillards' store is located.
+
+
