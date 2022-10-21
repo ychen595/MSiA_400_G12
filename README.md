@@ -43,7 +43,9 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 	- For the store data, we worked on Dillards' store location by state. 
 
-	- For the SKU data XXXX
+	- For the SKU data XXX
+
+	- For the relationship between SKU and store data, we took a look at the distribution of cost price and retial price for each SKU. Also, we found out there were various SKUs whose either cost price or retail price was zero and assumed that they might be some special SKUs.
 
 - We formulated two plausible business questions: 
 	
