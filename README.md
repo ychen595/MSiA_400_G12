@@ -5,7 +5,7 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 ### Until Oct 14th 2022
 
-**What we’ve done this week (up to Oct 14th):**
+**What we’ve done (up to Oct 14th):**
 
 - Downloaded pgAdmin, connected to MSiA’s Postgres server, and explored pgAdmin.
 
@@ -22,18 +22,42 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 - Fix problems in tables skuinfo and transact using command line and/or Python and/or R and import all datasets into Postgres.
 
 - Data exploration on the database and understand the meaning or relationship between each column.
-Sample the dataset to find the most appropriate subsets. 
+
+- Sample the dataset to find the most appropriate subsets. 
 
 - Define ML questions. 
 
-### Oct 15th - Oct 21st 
+### Oct 17th - Oct 21st 
+
+**What we’ve done this week:**
+
+- Finished cleaning the *skuinfo* table for uploading purposes. This table had 8,148 rows that had more columns than expected. The problem developed mainly from the *color* and *company* fields which are non-quoted strings and had some comas that were causing extra columns. This problematic rows were fixed by replacing the wrong patterns for corrected versions (eg: "BB CO, I" --> "BB CO I"). See the *Clean_SKUINFO_TRNSACT.txt* file in *02_Data_Cleansing* for further details. 
+
+- Finished cleaning the *trnsact* table for uploading purposes. The columns in this table did not correspond to those in the schema provided. Additionally, it presented two columns that where almost exactly equal (except for 7 observations). This rows were removed from the database as well as the duplicated column. 
+
+- Finished uploading all tables into Postgres.
+
+- We started the EDA on the tables with the goal of understanding how the data is related in order to be able to formulate our business and ML questions. The EDA included: 
+
+	- For the transaction data we took a random sample of 100,000 observations to check the data distribution, correlation among variables and verify the presence of outliers. 
+
+	- For the store data, we worked on Dillards' store location by state. 
+
+	- For the SKU data XXXX
+
+- We formulated two plausible business questions: 
+	
+	1. Predict the next quarter total sales for each Brand on each store. 
+
+	2. STATE THE RETURNS IDEA.
 
 
-**What we’ve done this week (up to Oct 20th):**
+**What we're going to do the next week (Oct 24th-28th)**
 
-- Started the EDA on transection database random sampling from the original data. Checked the data distribution. Graphed correlation. Check and taken out outliers to reduce skewness. 
+- Talk to the professor to receive oriententation regarding our two possible business questions. 
 
-- Worked on store location visualization. Plot the number of stores by each store to see where Dillards' store is located.
+- Define the business problem and research more about how it is takled in the industry. 
 
-**What we're going to do the next week**
-- prepare features
+- Define the appropiate ML learning question to address the buisness problem. 
+
+- Keep working on the data cleansing and EDA. 
