@@ -1,0 +1,48 @@
+--- SKUINFO FILE ---
+
+# Find # fields in each row. 
+awk -F "," '{ for (i = 1; i = NR; i+=1) print NF}' skuinfo.csv > fields.txt
+
+# Find rows with more than 11 cols 
+awk -F "," 'NF>11{print $0}' skuinfo.csv > more_rows_skuinfo.csv
+
+# --- Change patterns ---
+
+# Remove extra blank column at the end 
+sed 's/, ,0.$/,0/g; s/,  ,0.$/,0/g; s/, ,1.$/,1/g; s/,  ,1.$/,1/g' skuinfo.csv > skuinfo2.csv
+
+# -- Update rows with more that 11 cols in the new file ---
+awk -F "," 'NF>11{print $0}' skuinfo2.csv > more_rows_skuinfo.csv
+
+# Change specific patterns in company name: 
+	# BB CO, I ---> BB CO I
+	# F-50, LL ---> F-50 LL
+	# WEMCO, RE ---> WEMCO RE
+	# WEMCO,RE ---> WEMCO RE
+	# MARAN, I ---> MARAN I
+	# SUN B, L ---> SUN B L
+	# AHA, INC ---> AHA INC
+	# TROO,LLC ---> TROO LLC
+	# YSL,ARRO ---> YSL ARRO
+	# VANS, IN ---> VANS IN
+sed 's/BB CO, I/BB CO I/g; s/F-50, LL/F-50 LL I/g; s/WEMCO, RE/WEMCO RE/g; s/MARAN, I/MARAN I/g; s/AHA, INC/AHA INC/g; s/SUN B, L/SUN B L/g; s/TROO,LLC/TROO LLC/g; s/YSL,ARRO/YSL ARRO/g'; s/VANS, IN/VANS IN/g' skuinfo2.csv > skuinfo3.csv	
+
+# -- Update rows with more that 11 cols in the new file ---
+awk -F "," 'NF>11{print $0}' skuinfo3.csv > more_rows_skuinfo.csv
+
+
+# change specific patterns in COLORS
+sed 's/NVY,CHTI/NVY-CHTI/g; s/RVB=RED, RY/RVB RED RY/g; s/RED, NAVY/RED NAVY/g;' skuinfo.csv > skuinfo_clean.csv
+
+
+--- TRNSACT FILE ---
+
+# Remove rows in which cols 10 and 11 are different
+sed '4423131d;48757595d;55476100d;71858786d;73694822d;76111804d;80942498d' trnsact.csv > trnsact2.csv  
+
+# Remove repeated column 11 
+cut -d',' -f1,2,3,4,5,6,7,8,9,10,12,13,14 trnsact2.csv > trnsact_clean.csv
+
+# The order of columns does not correspond to the order in the schema. The correct order is:
+# SKU(key), STORE(key), REGISTER(key), TRANNUM(key), INTID(key), SALEDATE (KEY), STYPE, QUANTITY, 
+# ORIGPRICE, AMT, SEQ, MIC, EXTRA_COL cd D
