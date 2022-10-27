@@ -69,12 +69,14 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 **What we’ve done this week:**
 - Continue EDA work to explore feature distribution; taken outliers.
-- Discuss more details on both of the business problems scope and try to choose one with more business insights.
-
+- Discussed more details on both of the possible business problems. We selected as our buisness question: "predict next quarter's return probability for each brand on each store," which we believe has more business insight.
+- We discussed our ML problem. We aim to estimate logistic regression, decision forest and SVM to compare the performance of the algorithms. 
+- Talk to the professor to recieve orientation regarding the most adequate ML algorithm to solve the buisness question. 
 
 
 **What we're going to do the next week (Oct 29th-Nov. 5th)**
 
 - Try to finish EDA work
-- Pick one of the business proposals.
+- Define the ML problem.
+- Start modeling. 
 
