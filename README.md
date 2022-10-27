@@ -63,3 +63,16 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 - Define the appropiate ML learning question to address the buisness problem. 
 
 - Keep working on the data cleansing and EDA. 
+
+
+### Oct 22th - Oct 28st 
+**What we’ve done this week:**
+- Continue EDA work to explore feature distribution; taken outliers.
+- Discuss more details on both of the business problems scope and try to choose one with more business insights.
+
+
+
+**What we're going to do the next week (Oct 29th-Nov. 5th)**
+Try to finish EDA work
+Pick one of the business proposals.
+
