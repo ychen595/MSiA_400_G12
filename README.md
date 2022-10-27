@@ -69,8 +69,8 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 **What we’ve done this week:**
 - Continue EDA work to explore feature distribution; taken outliers.
-- Discussed more details on both of the possible business problems. We selected as our buisness question: "predict next quarter's return probability for each brand on each store," which we believe has more business insight.
-- We discussed our ML problem. We aim to estimate logistic regression, decision forest and SVM to compare the performance of the algorithms. 
+- Discussed more details on both of the possible business problems with the Professor. We selected as our buisness question: "Increasing revenue is the goal of any retail store. Predicting the next quarter's total sales for each brand on each store could suppor managment decisions" which we believe has more business insight.
+- We discussed about our ML problem. We aim to estimate linear/lasso/ridge regression, decision forest and SVM to compare the performance of the algorithms. 
 - Talk to the professor to recieve orientation regarding the most adequate ML algorithm to solve the buisness question. 
 
 
