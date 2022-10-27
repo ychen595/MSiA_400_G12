@@ -66,6 +66,7 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 
 ### Oct 22th - Oct 28st 
+
 **What we’ve done this week:**
 - Continue EDA work to explore feature distribution; taken outliers.
 - Discuss more details on both of the business problems scope and try to choose one with more business insights.
@@ -73,6 +74,7 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 
 **What we're going to do the next week (Oct 29th-Nov. 5th)**
-Try to finish EDA work
-Pick one of the business proposals.
+
+- Try to finish EDA work
+- Pick one of the business proposals.
 
