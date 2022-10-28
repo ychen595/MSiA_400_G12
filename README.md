@@ -78,5 +78,6 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 - Try to finish EDA work
 - Define the ML problem.
+- Compare different kinds of ML model and decide the one we're going to use for our project
 - Start modeling. 
 
