@@ -81,3 +81,4 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 - Compare different kinds of ML model and decide the one we're going to use for our project
 - Start modeling. 
 
+### Oct 31st - Nov 4th
