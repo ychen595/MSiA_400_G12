@@ -74,7 +74,7 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 - Talk to the professor to recieve orientation regarding the most adequate ML algorithm to solve the buisness question. 
 
 
-**What we're going to do the next week (Oct 29th-Nov. 5th)**
+**What we're going to do the next week (Oct 29th-Nov. 4th)**
 
 - Try to finish EDA work
 - Define the ML problem.
@@ -82,3 +82,12 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 - Start modeling. 
 
 ### Oct 31st - Nov 4th
+
+**What we’ve done this week:**
+- Feature engineered time series variables: month, year, quarter, week of year
+- Aggregated transaction data (SKU, transaction amount, transaction type) based on month and store value. Also created lagging features for transaction amount.
+
+
+
+**What we're going to do the next week (Nov. 5th -- Nov. 11th)**
+
