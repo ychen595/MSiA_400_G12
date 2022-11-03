@@ -89,5 +89,5 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 
 
-**What we're going to do the next week (Nov. 5th -- Nov. 11th)**
+**What we're going to do the next week (Nov. 5th - Nov. 11th)**
 
