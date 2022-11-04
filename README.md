@@ -84,7 +84,7 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 ### Oct 31st - Nov 4th
 
 **What we’ve done this week:**
-- Given that we want to do monthly predicitjons, we first need to aggregate the data. Additionally we have to do feature engineering to create variables such as revenue or discounts, lagged variables, etc. We also figured out that we need to find the difference between retail and orgprice, to understand how to get revenue and discounts. 
+- Given that we want to do monthly predictions, we first need to aggregate the data. Additionally we have to do feature engineering to create variables such as revenue or discounts, lagged variables, etc. We also figured out that we need to find the difference between retail and orgprice, to understand how to get revenue and discounts. 
 - We started to aggregate the data and do some feature engineering. We particularly created some time variables: month, year, quarter, week of year and aggregated transaction data (SKU, transaction amount, transaction type) based on month and store value. Also created lagging features for transaction amount.
 - We investigated the some features("origprice", "retail"). Origprice is the manufacturer's suggested retail price, the price an item is intended to be, and retail is the price of an item in a shop. 
 
