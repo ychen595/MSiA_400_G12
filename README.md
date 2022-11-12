@@ -90,5 +90,20 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 
 **What we're going to do the next week (Nov. 5th - Nov. 11th)**
-- We plan to continue working on featurea engineering and data aggreagation. 
+- We plan to continue working on feature engineering and data aggreagation. 
 - After the data is aggregated, we will need to do a quick EDA again and maybe some data cleanning. 
+
+
+### Oct 7th - Nov 11th
+
+**What we’ve done this week:**
+- We finihsed the feature engineering on number of sku's, number of departments, mean package size, etc .. 
+- We finished doing the data agreggation and started doing EDA on the aggregated data set. However we found out that when agregating data monthly, we end up with only 13 observations (data spans from August 2004 to August 2005). This would represent a problem to do any kind of estimations. 
+- We intend to modify the problem so that we predict daily sales per store. Note that there are 453 different stores so one-hot-encoding will generate453 dummy variables, we might change to a state level instead of store level. 
+- We started to study the models we plan to estimate. 
+
+
+**What we're going to do the next week (Nov. 14th - Nov. 18th)**
+- Wokr on the data agregation daily at the store (state) level. 
+- Apply the same feature engineering as before to the new data set and redo a quick EDA. 
+- Try to start estimating some models.  
