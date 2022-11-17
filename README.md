@@ -110,8 +110,8 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 ### Nov 14th - Nov 18th 
 
 **What we've done this week:**
-- WRITE HERE ABOUT FIRST TRY OF MODELLING WITH SMALL SMAPLE BEFORE DATA AGREGGATION
-- We finished aggregating the data by day and state. All the aggregations were done directly in Postgress SQL. 
+- Build boosting model with randomly sampled data before data aggregation.
+- We finished aggregating the data by day and state. All the aggregations were done directly in Postgres SQL. 
 - We finished feature engineering in the aggregated dataset. 
 - WRITE HERE ABOUT LIT REVIEW ON DIFFERENT MODELS FOR TIME SERIES.
 
