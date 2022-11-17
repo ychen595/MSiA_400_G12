@@ -110,8 +110,9 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 ### Nov 14th - Nov 18th 
 
 **What we've done this week:**
-- WRITE HERE ABOUT FIRST TRY OF MODELLING WITH SMALL SMAPLE BEFORE DATA AGREGGATION
-- We finished aggregating the data by day and state. All the aggregations were done directly in Postgress SQL. 
+- Build boosting model with randomly sampled data before data aggregation under file '04_modeling/Toy_dataset_model.ipynb'
+- The toy model has r square of 0.49 and RMSE of 17.1995 for testing on data after 2005-07-01.  
+- We finished aggregating the data by day and state. All the aggregations were done directly in Postgres SQL. 
 - We finished feature engineering in the aggregated dataset. 
 - WRITE HERE ABOUT LIT REVIEW ON DIFFERENT MODELS FOR TIME SERIES.
 
