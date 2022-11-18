@@ -115,7 +115,7 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 - The toy model has r square of 0.49 and RMSE of 17.1995 for testing on data after 2005-07-01.  
 - We finished aggregating the data by day and state. All the aggregations were done directly in Postgres SQL. 
 - We finished feature engineering in the aggregated dataset. 
-- WRITE HERE ABOUT LIT REVIEW ON DIFFERENT MODELS FOR TIME SERIES.
+- We researched on multiple time series models and finally chose ARIMA, FBProphet models, also the linear regression models as our base line models. The detailed information and demo codes are under '04_modeling' file.
 
 
 **What we're going to do the next week (Nov 21st - Nov. 25th)**
