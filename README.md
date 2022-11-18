@@ -104,6 +104,21 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 
 
 **What we're going to do the next week (Nov. 14th - Nov. 18th)**
-- Wokr on the data agregation daily at the store (state) level. 
+- Work on the data agregation daily at the store (state) level. 
 - Apply the same feature engineering as before to the new data set and redo a quick EDA. 
 - Try to start estimating some models.  
+
+### Nov 14th - Nov 18th 
+
+**What we've done this week:**
+- Build boosting model with randomly sampled data before data aggregation under file '04_modeling/Toy_dataset_model.ipynb'
+- The toy model has r square of 0.49 and RMSE of 17.1995 for testing on data after 2005-07-01.  
+- We finished aggregating the data by day and state. All the aggregations were done directly in Postgres SQL. 
+- We finished feature engineering in the aggregated dataset. 
+- WRITE HERE ABOUT LIT REVIEW ON DIFFERENT MODELS FOR TIME SERIES.
+
+
+**What we're going to do the next week (Nov 21st - Nov. 25th)**
+- Do EDA on aggregated data. 
+- Rerun the current model using the aggregated data. 
+- Try alternative models for our problem. 
