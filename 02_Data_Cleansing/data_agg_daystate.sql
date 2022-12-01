@@ -1,6 +1,6 @@
 -- Agregate trnsact tbl by day and state 
-drop table if exists agg_data2;
-CREATE TABLE agg_data2 AS(
+drop table if exists agg_data3;
+CREATE TABLE agg_data3 AS(
 SELECT 
 "SALEDATE" as saledate, 
 "STATE" as state,
@@ -48,3 +48,5 @@ LEFT JOIN "SKUINFO" ON "TRNSACT"."SKU" = "SKUINFO"."SKU"
 LEFT JOIN "SKSTINFO" ON "TRNSACT"."SKU" = "SKSTINFO"."SKU" AND "TRNSACT"."STORE" = "SKSTINFO"."STORE"
 GROUP BY "SALEDATE", "STATE"
 );
+
+
