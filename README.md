@@ -122,3 +122,20 @@ Repo for the team project of MSiA 400: Everything Starts with Data
 - Do EDA on aggregated data. 
 - Rerun the current model using the aggregated data. 
 - Try alternative models for our problem. 
+
+
+### Nov 27th - Dec 2nd 
+
+**What we've done this week:**
+- Upgrade EDA on original data
+- Do EDA on aggregated data
+- Re-run gradient boosting machine model for aggrregated data. 
+- Trye alternative models such as FB Prophet and VAR. Performance is not really good. 
+- The toy model has r square of 0.49 and RMSE of 17.1995 for testing on data after 2005-07-01.  
+- Start investigating the ROI
+
+
+**What we're going to do the next week (Dec 5th - Dec 9th)**
+- Finish Modelling
+- Finish ROI
+- Write report and presentation. 
