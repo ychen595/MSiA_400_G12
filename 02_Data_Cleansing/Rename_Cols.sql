@@ -1,3 +1,7 @@
+-- MSiA 400 - Final Project
+-- INITITAL EDA: SKSTINFO Table
+-- Team 12: Alejandra Lelo de Larrea Ibarra, Xin Shu, Yi Chen, Yiqing Cheng
+
 -- RenameColumns: INT and SEQ are inverted
 ALTER TABLE "TRNSACT"
   RENAME COLUMN "SEQ" TO "INTID2";
