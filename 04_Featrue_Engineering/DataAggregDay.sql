@@ -1,3 +1,7 @@
+-- MSiA 400 - Final Project
+-- DATA AGREGATION BY DAY
+-- Team 12: Alejandra Lelo de Larrea Ibarra, Xin Shu, Yi Chen, Yiqing Cheng
+
 -- Create aggregated data
 drop table if exists aggtrnsactdaily;
 CREATE TABLE aggtrnsactdaily AS(
