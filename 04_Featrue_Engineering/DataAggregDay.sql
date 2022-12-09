@@ -1,6 +1,6 @@
 -- Create aggregated data
-drop table if exists aggtrnsact;
-CREATE TABLE aggtrnsact AS(
+drop table if exists aggtrnsactdaily;
+CREATE TABLE aggtrnsactdaily AS(
 WITH purchases as(
 	SELECT * 
 	FROM "TRNSACT"
@@ -8,7 +8,7 @@ WITH purchases as(
 )
 SELECT 
 	"SALEDATE" as saledate, 
-	"STATE" as state,
+	COUNT(DISTINCT purchases."STORE") as nstores,
 	COUNT(DISTINCT purchases."SKU") AS nsku,
 	SUM("QUANTITY") AS totalquantity, 
 	SUM("QUANTITY") /COUNT(DISTINCT "TRANNUM") AS avgquantity, 
@@ -47,45 +47,14 @@ FROM purchases
 LEFT JOIN "STRINFO" ON purchases."STORE" = "STRINFO"."STORE"
 LEFT JOIN "SKUINFO" ON purchases."SKU" = "SKUINFO"."SKU"
 LEFT JOIN "SKSTINFO" ON purchases."SKU" = "SKSTINFO"."SKU" AND purchases."STORE" = "SKSTINFO"."STORE"
-GROUP BY "SALEDATE", "STATE"
+GROUP BY "SALEDATE"
 );
 
-GRANT ALL ON TABLE public.aggtrnsact TO ali8110 WITH GRANT OPTION;
+GRANT ALL ON TABLE public.aggtrnsactdaily TO ali8110 WITH GRANT OPTION;
 
-GRANT ALL ON TABLE public.aggtrnsact TO xst2267 WITH GRANT OPTION;
+GRANT ALL ON TABLE public.aggtrnsactdaily TO xst2267 WITH GRANT OPTION;
 
-GRANT ALL ON TABLE public.aggtrnsact TO ycj6475 WITH GRANT OPTION;
+GRANT ALL ON TABLE public.aggtrnsactdaily TO ycj6475 WITH GRANT OPTION;
 
-GRANT ALL ON TABLE public.aggtrnsact TO ycm3076 WITH GRANT OPTION;
+GRANT ALL ON TABLE public.aggtrnsactdaily TO ycm3076 WITH GRANT OPTION;
 
-
-drop table if exists aggtrnsact2;
-CREATE TABLE aggtrnsact2 AS(
-	SELECT * 
-	FROM aggtrnsact
-);
-
-UPDATE aggtrnsact2
-SET totalprofit = 0
-WHERE totalprofit<0;
-
-UPDATE aggtrnsact2
-SET avgprofittrnsact = 0
-WHERE avgprofittrnsact<0;
-
-UPDATE aggtrnsact2
-SET minprofit = 0
-WHERE minprofit<0;
-
-UPDATE aggtrnsact2
-SET maxprofit = 0
-WHERE maxprofit<0;
-
- 
-GRANT ALL ON TABLE public.aggtrnsact2 TO ali8110 WITH GRANT OPTION;
-
-GRANT ALL ON TABLE public.aggtrnsact2 TO xst2267 WITH GRANT OPTION;
-
-GRANT ALL ON TABLE public.aggtrnsact2 TO ycj6475 WITH GRANT OPTION;
-
-GRANT ALL ON TABLE public.aggtrnsact2 TO ycm3076 WITH GRANT OPTION;
