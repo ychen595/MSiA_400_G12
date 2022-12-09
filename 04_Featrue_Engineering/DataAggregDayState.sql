@@ -1,19 +1,3 @@
--- RenameColumns: INT and SEQ are inverted
-ALTER TABLE "TRNSACT"
-  RENAME COLUMN "SEQ" TO "INTID2";
-ALTER TABLE "TRNSACT"
-  RENAME COLUMN "INTID" TO "SEQ";
-ALTER TABLE "TRNSACT"
-  RENAME COLUMN "INTID2" TO "INTID";
-
--- RenameColumns: ORIGPRICE AND AMT are inverted
-ALTER TABLE "TRNSACT" 
-  RENAME COLUMN "ORIGPRICE" TO "AMT2";
-ALTER TABLE "TRNSACT"
-  RENAME COLUMN "AMT" TO "ORIGPRICE";
- ALTER TABLE "TRNSACT"
-  RENAME COLUMN "AMT2" TO "AMT";
-
 -- Create aggregated data
 drop table if exists aggtrnsact;
 CREATE TABLE aggtrnsact AS(
@@ -50,10 +34,10 @@ SELECT
 	SUM("RETAIL" - "ORIGPRICE")/COUNT(DISTINCT "TRANNUM") AS avgdiscounttrnsact,
 	MIN("RETAIL"-"ORIGPRICE") AS mindiscount, 
 	MAX("RETAIL"-"ORIGPRICE") AS maxdiscount,
-	SUM("COST"-"RETAIL") AS totalprofit,
-	SUM("COST"-"RETAIL")/COUNT(DISTINCT "TRANNUM") AS avgprofittrnsact,
-	MIN("COST"-"RETAIL") AS minprofit,
-	MAX("COST"-"RETAIL") AS maxprofit,
+	SUM("RETAIL"-"COST") AS totalprofit,
+	SUM("RETAIL"-"COST")/COUNT(DISTINCT "TRANNUM") AS avgprofittrnsact,
+	MIN("RETAIL"-"COST") AS minprofit,
+	MAX("RETAIL"-"COST") AS maxprofit,
 	COUNT(DISTINCT purchases."STORE") AS nstore,
 	COUNT(DISTINCT "CITY") AS ncities,
 	COUNT(DISTINCT "DEPT") AS ndept,
@@ -75,3 +59,33 @@ GRANT ALL ON TABLE public.aggtrnsact TO ycj6475 WITH GRANT OPTION;
 GRANT ALL ON TABLE public.aggtrnsact TO ycm3076 WITH GRANT OPTION;
 
 
+drop table if exists aggtrnsact2;
+CREATE TABLE aggtrnsact2 AS(
+	SELECT * 
+	FROM aggtrnsact
+);
+
+UPDATE aggtrnsact2
+SET totalprofit = 0
+WHERE totalprofit<0;
+
+UPDATE aggtrnsact2
+SET avgprofittrnsact = 0
+WHERE avgprofittrnsact<0;
+
+UPDATE aggtrnsact2
+SET minprofit = 0
+WHERE minprofit<0;
+
+UPDATE aggtrnsact2
+SET maxprofit = 0
+WHERE maxprofit<0;
+
+ 
+GRANT ALL ON TABLE public.aggtrnsact2 TO ali8110 WITH GRANT OPTION;
+
+GRANT ALL ON TABLE public.aggtrnsact2 TO xst2267 WITH GRANT OPTION;
+
+GRANT ALL ON TABLE public.aggtrnsact2 TO ycj6475 WITH GRANT OPTION;
+
+GRANT ALL ON TABLE public.aggtrnsact2 TO ycm3076 WITH GRANT OPTION;
